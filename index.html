@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Movie Game</title>
+</head>
+<body>
+    <h1>🎬 Favorite Movie Game</h1>
+    <h2>Type <b>"quit"</b> to exit the game</h2>
+
+    <script>
+        const favMovie = "avatar"; // lowercase for comparison
+        let guess = prompt("Guess my favorite movie:");
+
+        while (guess !== null && guess.toLowerCase() !== favMovie && guess.toLowerCase() !== "quit") {
+            guess = prompt("❌ Wrong guess! Try again:");
+        }
+
+        if (guess !== null && guess.toLowerCase() === favMovie) {
+            alert("🎉 Congrats! You guessed it right.");
+        } else {
+            alert("👋 You quit the game.");
+        }
+    </script>
+</body>
+</html>
